@@ -13,7 +13,7 @@ def build_heap(data):
        
         if not i*2>n:
             if data[i]>data[left] or data[i]>data[right]:
-                if data[left(i)]<data[right(i)]:
+                if data[left]<data[right]:
                     data[i], data[left] = data[left], data[i]
                     swaps.append((i,left))
                 else:
