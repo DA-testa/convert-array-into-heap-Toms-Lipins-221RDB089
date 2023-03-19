@@ -13,22 +13,14 @@ def build_heap(data):
        
         if not i*2>n:
             if data[i]>data[left] or data[i]>data[right]:
-                if data[left]<data[right]:
+                if data[left(i)]<data[right(i)]:
                     data[i], data[left] = data[left], data[i]
                     swaps.append((i,left))
                 else:
                     data[i], data[right] = data[right], data[i]
                     swaps.append((i,right))
 
-       
-       
-
-        
-
-
-
     
-
     return swaps
 
 
@@ -53,7 +45,7 @@ def main():
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
-
+   
 
     # output all swaps
     print(len(swaps))
